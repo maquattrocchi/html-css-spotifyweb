@@ -9,6 +9,7 @@ html{
     font-size: 16px;
 }
 body{
+    /* min-width: 576px; */
     color: white;
     font-family: 'Montserrat', sans-serif;;
 }
@@ -25,7 +26,7 @@ body{
 /* aside */
 aside{
     width: 230px;
-    padding: 10px;
+    padding: 20px;
     background-color: #000000;
     top: 0;
     left: 0;
@@ -43,14 +44,24 @@ aside li{
 .logo{
     width: 70%;
 }
+.logo-box{
+    position: relative;
+}
 aside>div{
     padding: 10px 0;
 }
 aside img{
     width: 100%;
 }
+.logo-small{
+    display: none;
+    width: 35px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
 .menu li img{
-    width: 17px;
+    width: 30px;
     vertical-align: middle;
 }
 .playlist{
@@ -69,17 +80,17 @@ aside img{
     background-color: #A3A3A3;
 }
 .user{
-    width: 210px;
+    width: calc(100% - 40px);
     background-color: #000000;
     position: absolute;
     bottom: 0;
 }
 .user .fa-arrow-down{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     margin-right: 3px;
-    border: 1px solid #A3A3A3;
+    border: 2px solid #A3A3A3;
     border-radius: 50%;
-    padding: 2px;
+    padding: 4px
 }
 .user div:first-child{
     padding: 5px 0;
@@ -91,7 +102,7 @@ aside img{
 }
 .user img{
     vertical-align: middle;
-    width: 20px;
+    width: 30px;
     padding: 2px;
     border-radius: 50%;
     background-color: #A3A3A3;
@@ -100,12 +111,6 @@ aside img{
 main{
     width: calc(100% - 230px);
     background-color: #141922;
-}
-.main-content{
-    height: 100%;
-    width: 100%;
-    overflow-y: auto;
-    padding-top: 90px;
 }
 .nav-top{
     width: calc(100% - 230px);
@@ -116,6 +121,74 @@ main{
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.3)
 }
+.nav-top .upgrade{
+    padding: 10px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-radius: 18px;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 12px;
+    right: 30px;
+}
+/* main content */
+.main-content{
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    padding-top: 70px;
+}
+main h1{
+    font-size: 1.4rem;
+}
+main h2{
+    font-size: 1rem;
+    padding-top: 10px;
+}
+main p{
+    font-size: 0.8rem;
+    padding-top: 13px;
+}
+main nav{
+    padding: 10px 0;
+    text-align: center;
+}
+main nav li{
+    display: inline-block;
+    margin: 5px;
+}
+main nav a{
+    color: #A3A3A3;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.main-content section{
+    padding: 20px;
+}
+.main-content .main-box{
+    width: 100%;
+    padding-top: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+}
+.main-box .card{
+    width: calc((100% - 75px) / 6);
+}
+.card .card-img{
+    width: 100%;
+}
+.card-img img{
+    width: 100%;
+}
+.card .circle-img{
+    border-radius: 50%;
+}
+.card .card-text{
+    text-align: center;
+}
 /* footer */
 footer{
     height: 90px;
@@ -124,4 +197,50 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
+}
+
+/* media query */
+@media screen and (max-width: 992px){
+    .main-box .card{
+        width: calc((100% - 75px) / 4);
+    }
+}
+@media screen and (max-width: 768px){
+    .main-box .card{
+        width: calc((100% - 75px) / 4);
+    }
+}
+@media screen and (max-width: 576px){
+    aside{
+        width: 70px;
+        text-align: center;
+    }
+    .logo{
+        visibility: hidden;
+    }
+    .logo-small{
+        display: block;
+    }
+    .menu ul{
+        padding-top: 15px;
+    }
+    .menu a, .playlist, .user span, .user a{
+        display: none;
+    }
+    .user div:first-child{
+        border-bottom: none;
+    }
+    .user img, .user .fa-arrow-down{
+        display: inline-block;
+        margin-right: 0;
+    }
+    main{
+        width: calc(100% - 70px);
+    }
+    .nav-top{
+        width: calc(100% - 70px);
+    }
+    .main-box .card{
+        width: calc((100% - 75px) / 2);
+    }
 }
