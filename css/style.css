@@ -5,9 +5,11 @@
     box-sizing: border-box;
 }
 /* general */
+html{
+    font-size: 16px;
+}
 body{
     color: white;
-    font-size: 12px;
     font-family: 'Montserrat', sans-serif;;
 }
 .container{
@@ -25,9 +27,18 @@ aside{
     width: 230px;
     padding: 10px;
     background-color: #000000;
-    position: fixed;
     top: 0;
     left: 0;
+    font-size: 0.9rem;
+    position: relative;
+}
+aside a{
+    color: #A3A3A3;
+    text-decoration: none;
+}
+aside li{
+    list-style: none;
+    padding: 5px 0;
 }
 .logo{
     width: 70%;
@@ -35,20 +46,58 @@ aside{
 aside>div{
     padding: 10px 0;
 }
-.menu li{
-    list-style: none;
-    padding: 5px 0;
-}
-.menu li img{
-    width: 20px;
-    vertical-align: middle;
-}
 aside img{
     width: 100%;
 }
+.menu li img{
+    width: 17px;
+    vertical-align: middle;
+}
+.playlist{
+    height: 50%;
+    overflow-y: auto;
+}
+.playlist h3{
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-size: 1rem;
+}
+.playlist li .fa-plus{
+    padding: 7px;
+    margin-right: 3px;
+    color: black;
+    background-color: #A3A3A3;
+}
+.user{
+    width: 210px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+}
+.user .fa-arrow-down{
+    font-size: 0.7rem;
+    margin-right: 3px;
+    border: 1px solid #A3A3A3;
+    border-radius: 50%;
+    padding: 2px;
+}
+.user div:first-child{
+    padding: 5px 0;
+    border-bottom: 1px solid #A3A3A3;
+}
+.user div:last-child{
+    padding: 10px 0;
+    font-size: 1rem;
+}
+.user img{
+    vertical-align: middle;
+    width: 20px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: #A3A3A3;
+}
 /* main */
 main{
-    margin-left: 230px;
     width: calc(100% - 230px);
     background-color: #141922;
 }
