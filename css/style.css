@@ -9,12 +9,14 @@ html{
     font-size: 16px;
 }
 body{
-    /* min-width: 576px; */
     color: white;
     font-family: 'Montserrat', sans-serif;;
 }
 .container{
     height: 100vh;
+    width: 100%;
+}
+img{
     width: 100%;
 }
 /* contenitore principale */
@@ -26,12 +28,12 @@ body{
 /* aside */
 aside{
     width: 230px;
-    padding: 20px;
+    padding-top: 20px;
+    font-size: 0.9rem;
     background-color: #000000;
+    position: relative;
     top: 0;
     left: 0;
-    font-size: 0.9rem;
-    position: relative;
 }
 aside a{
     color: #A3A3A3;
@@ -41,29 +43,41 @@ aside li{
     list-style: none;
     padding: 5px 0;
 }
+.logo-box, .playlist, .user{
+    padding: 10px 24px;
+}
+/* logo */
 .logo{
     width: 70%;
 }
 .logo-box{
     position: relative;
 }
-aside>div{
-    padding: 10px 0;
-}
-aside img{
-    width: 100%;
-}
 .logo-small{
     display: none;
     width: 35px;
     position: absolute;
     top: 10px;
-    left: 0;
 }
+/* menu */
 .menu li img{
     width: 30px;
     vertical-align: middle;
 }
+.menu li{
+    padding: 5px 20px;
+    border-left: 4px solid transparent;
+}
+.menu a{
+    vertical-align: middle;
+}
+.menu li.active{
+    border-left: 4px solid #ADFF2F;
+}
+.menu li:hover{
+    border-left: 4px solid #ADFF2F;
+}
+/* playlist */
 .playlist{
     height: 50%;
     overflow-y: auto;
@@ -71,7 +85,6 @@ aside img{
 .playlist h3{
     text-transform: uppercase;
     padding-bottom: 5px;
-    font-size: 1rem;
 }
 .playlist li .fa-plus{
     padding: 7px;
@@ -79,39 +92,53 @@ aside img{
     color: black;
     background-color: #A3A3A3;
 }
+/* .user */
 .user{
-    width: calc(100% - 40px);
+    width: 100%;
     background-color: #000000;
     position: absolute;
+    left: 0;
     bottom: 0;
 }
 .user .fa-arrow-down{
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     margin-right: 3px;
     border: 2px solid #A3A3A3;
     border-radius: 50%;
     padding: 4px
 }
-.user div:first-child{
-    padding: 5px 0;
-    border-bottom: 1px solid #A3A3A3;
-}
-.user div:last-child{
+.user div{
     padding: 10px 0;
-    font-size: 1rem;
+}
+.user div:first-child{
+    border-bottom: 1px solid #A3A3A3;
 }
 .user img{
     vertical-align: middle;
-    width: 30px;
+    width: 25px;
     padding: 2px;
     border-radius: 50%;
     background-color: #A3A3A3;
 }
+.user span{
+    font-size: 1rem;
+    vertical-align: middle;
+}
+/* hover aside */
+aside a:hover{
+    color: white;
+}
+aside a:hover .fa-solid{
+    background-color: white;
+}
+/* /aside */
+
 /* main */
 main{
     width: calc(100% - 230px);
     background-color: #141922;
 }
+/* .nav-top */
 .nav-top{
     width: calc(100% - 230px);
     height: 70px;
@@ -119,17 +146,26 @@ main{
     top: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.3)
+    background-color: rgba(0, 0, 0, 0.5)
 }
 .nav-top .upgrade{
-    padding: 10px;
+    padding: 10px 30px;
     text-transform: uppercase;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 18px;
     font-size: 0.8rem;
     position: absolute;
     top: 12px;
     right: 30px;
+    transition: all 0.8s;
+}
+.nav-top .upgrade a{
+    color: white;
+    text-decoration: none;
+}
+/* nav-top hover */
+.nav-top .upgrade:hover{
+    transform: scale(1.1);
 }
 /* main content */
 .main-content{
@@ -150,24 +186,33 @@ main p{
     padding-top: 13px;
     color: #A3A3A3;
 }
-main nav{
-    padding: 10px 0;
+/* nav */
+.main-content nav{
     text-align: center;
 }
-main nav li{
+.main-content nav li{
     display: inline-block;
-    margin: 5px;
+    padding: 20px 10px;
 }
-main nav a{
+.main-content nav a{
     color: #A3A3A3;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: none;
 }
+.main-content nav li span{
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+}
+.main-content nav li .active{
+    border-bottom: 3px solid #ADFF2F;
+}
+/* section */
 .main-content section{
     padding: 20px;
 }
+/* main-box */
 .main-content .main-box{
     width: 100%;
     padding-top: 30px;
@@ -178,11 +223,30 @@ main nav a{
 .main-box .card{
     width: calc((100% - 75px) / 6);
 }
-.card .card-img{
+.card-img{
     width: 100%;
+    position: relative;
 }
-.card-img img{
+.card-img-change{
+    display: none;
     width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 4rem;
+    line-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.circle-change{
+    border-radius: 50%;
+}
+.card-img-change .fa-regular{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .card .circle-img{
     border-radius: 50%;
@@ -190,11 +254,22 @@ main nav a{
 .card .card-text{
     text-align: center;
 }
+/* main-content hover */
+.main-content nav a:hover{
+    color: white;
+}
+.main-content nav li:hover span{
+    border-bottom: 3px solid #ADFF2F;
+}
+.card-img:hover .card-img-change{
+    display: block;
+}
+/* /main */
+
 /* footer */
 footer{
     height: 90px;
     width: 100%;
-    font-size: 0.9rem;
     background-color: #282828;
     position: fixed;
     bottom: 0;
@@ -204,13 +279,17 @@ footer{
 }
 .flex-container{
     display: flex;
+    align-items: center;
 }
 footer .box{
     width: 25%;
-    align-items: center;
     gap: 15px;
     margin: 0 20px;
 }
+footer .fa-regular, footer .fa-solid, footer .title p{
+    cursor: pointer;
+}
+/* left */
 footer .left p{
     font-size: 0.8rem;
 }
@@ -220,51 +299,98 @@ footer .left p, footer .left .fa-regular{
 footer .left .image{
     width: 50px;
 }
-.left img{
-    width: 100%;
-}
+/* center */
 footer .center{
     width: 50%;
     flex-flow: column wrap;
-    align-items: center;
     gap: 15px;
 }
 .center-up{
     gap: 30px;
-    font-size: 1.1rem;
-    align-items: center;
+    font-size: 1.3rem;
 }
 .center-up .fa-circle-play{
-    font-size: 1.9rem;
+    font-size: 2.4rem;
 }
 .center-down{
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+    justify-content: space-around;
     font-size: 0.8rem;
 }
 .progress-bar{
     height: 5px;
-    background-color: #A3A3A3;
+    background-color: #5A5A5A;
     border-radius: 3px;
-    overflow: hidden;
-}
-.progress-bar .progress{
-    width: 30%;
-    height: 5px;
-    background-color: #C1C1C1;
+    cursor: pointer;
 }
 .center-down .progress-bar{
     width: 80%;
 }
+.progress-bar .progress{
+    width: 30%;
+    height: 100%;
+    border-radius: 3px;
+    background-color: #C1C1C1;
+    position: relative;
+}
+.progress-bar .progress .circle{
+    display: none;
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: -5px;
+}
+.center-down .progress{
+    animation: music-time 100s linear infinite;
+}
+@keyframes music-time{
+    from{width: 0;}
+    to{width: 100%;}
+}
+/* right */
 footer .right{
     justify-content: flex-end;
 }
 footer .right .progress-bar{
     width: 100px;
 }
-
+/* vertical-bar */
+footer .right .vertical-bar{
+    display: none;
+    width: 5px;
+    height: 70px;
+}
+footer .vertical-bar .vertical-progress{
+    width: 100%;
+    height: 50%;
+}
+.vertical-bar .vertical-progress .vertical-circle{
+    right: -5px;
+    top: 50%;
+}
+/* footer hover */
+footer .title p:hover{
+    text-decoration: underline;
+}
+footer .title p:hover, footer .left .fa-regular:hover{
+    color: white;
+}
+footer .center .fa-regular:hover :not(.fa-circle-play), footer .center .fa-solid:hover, footer .right .fa-solid:hover{
+    color: #ADFF2F;
+}
+.progress-bar .progress:hover{
+    background-color: #ADFF2F;
+}
+.progress-bar .progress:hover .circle{
+    display: block;
+}
+.center-up .fa-circle-play:hover{
+    transform: scale(1.2);
+}
+/* /footer */
 /* media query */
 @media screen and (max-width: 992px){
     .main-box .card{
@@ -287,11 +413,17 @@ footer .right .progress-bar{
     .progress-bar{
         width: 80%;
     }
+    footer .right .vertical-bar{
+        display: block;
+    }
 }
 @media screen and (max-width: 576px){
     aside{
         width: 70px;
         text-align: center;
+    }
+    .logo-box{
+        padding: 10px 18px;
     }
     .logo{
         visibility: hidden;
@@ -301,6 +433,14 @@ footer .right .progress-bar{
     }
     .menu ul{
         padding-top: 15px;
+    }
+    .menu li, .menu li.active{
+        border: none;
+    }
+    .menu li:hover{
+        border: none;
+        transform: scale(1.2);
+        cursor: pointer;
     }
     .menu a, .playlist, .user span, .user a{
         display: none;
@@ -312,6 +452,10 @@ footer .right .progress-bar{
         display: inline-block;
         margin-right: 0;
     }
+    .user .fa-arrow-down:hover{
+        transform: scale(1.2);
+        cursor: pointer;
+    }
     main{
         width: calc(100% - 70px);
     }
@@ -321,4 +465,5 @@ footer .right .progress-bar{
     .main-box .card{
         width: calc((100% - 75px) / 2);
     }
+
 }

@@ -27,7 +27,7 @@
                 </div>
                 <div class="menu">
                     <ul>
-                        <li> <img src="img/home.svg" alt="home"> <a href="#">Home</a href="#"></li>
+                        <li class="active"> <img src="img/home.svg" alt="home"> <a href="#">Home</a href="#"></li>
                         <li> <img src="img/search.svg" alt="search"> <a href="#">Cerca</a href="#"></li>
                         <li> <img src="img/libreria.svg" alt="libreria">
                         <a href="#">La tua Libreria</a href="#"></li>
@@ -58,18 +58,18 @@
             <main>
                 <div class="nav-top">
                     <div class="upgrade">
-                        <span>Effettua l'upgrade</span>
+                        <a href="#">Effettua l'upgrade</a>
                     </div>
                 </div>
                 <div class="main-content">
                     <nav>
                         <ul>
-                            <li><a href="#">In evidenza</a></li>
-                            <li><a href="#">Podcast</a></li>
-                            <li><a href="#">Classifiche</a></li>
-                            <li><a href="#">Generi e mood</a></li>
-                            <li><a href="#">Nuove uscite</a></li>
-                            <li><a href="#">Scopri</a></li>
+                            <li><a href="#">In e<span class="active">vide</span>za</a></li>
+                            <li><a href="#">Po<span>dca</span>st</a></li>
+                            <li><a href="#">Cla<span>ssifi</span>che</a></li>
+                            <li><a href="#">Gener<span>i e m</span>ood</a></li>
+                            <li><a href="#">Nuov<span>e us</span>cite</a></li>
+                            <li><a href="#">S<span>copr</span>i</a></li>
                         </ul>
                     </nav>
                     <section>
@@ -78,6 +78,7 @@
                             <div class="card">
                                 <div class="card-img">
                                     <img src="img/metal_lifting.jpg" alt="Heavy Metal">
+                                    <div class="card-img-change"><i class="fa-regular fa-circle-play"></i></div>
                                 </div>
                                 <div class="card-text">
                                     <h2>Heavy Metal</h2>
@@ -87,6 +88,7 @@
                             <div class="card">
                                 <div class="card-img">
                                     <img src="img/stranger.jpeg" alt="Stranger Things">
+                                    <div class="card-img-change"><i class="fa-regular fa-circle-play"></i></div>
                                 </div>
                                 <div class="card-text">
                                     <h2>Stranger Things Vol.1 (a Netflix Original Series Soundtrack</h2>
@@ -96,6 +98,7 @@
                             <div class="card">
                                 <div class="card-img">
                                     <img src="img/aquietplace.jpeg" alt="A quiet place">
+                                    <div class="card-img-change"><i class="fa-regular fa-circle-play"></i></div>
                                 </div>
                                 <div class="card-text">
                                     <h2>A quiet place</h2>
@@ -105,6 +108,7 @@
                             <div class="card">
                                 <div class="card-img">
                                     <img src="img/split.jpeg" alt="Split">
+                                    <div class="card-img-change"><i class="fa-regular fa-circle-play"></i></div>
                                 </div>
                                 <div class="card-text">
                                     <h2>Split</h2>
@@ -114,6 +118,7 @@
                             <div class="card">
                                 <div class="card-img">
                                     <img src="img/cure.jpeg" alt="A cure for wellness">
+                                    <div class="card-img-change"><i class="fa-regular fa-circle-play"></i></div>
                                 </div>
                                 <div class="card-text">
                                     <h2>A cure for wellness</h2>
@@ -123,6 +128,7 @@
                             <div class="card">
                                 <div class="card-img">
                                     <img src="img/sinister.jpeg" alt="Sinister">
+                                    <div class="card-img-change"><i class="fa-regular fa-circle-play"></i></div>
                                 </div>
                                 <div class="card-text">
                                     <h2>Sinister</h2>
@@ -138,6 +144,7 @@
                             <div class="card">
                                 <div class="card-img">
                                     <img src="img/radar.jpeg" alt="Release Radar">
+                                    <div class="card-img-change"><i class="fa-regular fa-circle-play"></i></div>
                                 </div>
                                 <div class="card-text">
                                     <h2>Release Radar</h2>
@@ -146,6 +153,7 @@
                             <div class="card">
                                 <div class="card-img">
                                     <img src="img/mixdaily.jpeg" alt="Daily Mix 1">
+                                    <div class="card-img-change"><i class="fa-regular fa-circle-play"></i></div>
                                 </div>
                                 <div class="card-text">
                                     <h2>Daily Mix 1</h2>
@@ -160,6 +168,7 @@
                             <div class="card">
                                 <div class="card-img">
                                     <img class="circle-img"  src="img/youg.jpeg" alt="Young and Beutiful">
+                                    <div class="card-img-change circle-change"><i class="fa-regular fa-circle-play"></i></div>
                                 </div>
                                 <div class="card-text">
                                     <h2>Lana del Rey</h2>
@@ -168,6 +177,7 @@
                             <div class="card">
                                 <div class="card-img">
                                     <img class="circle-img" src="img/einaudi.jpeg" alt="">
+                                    <div class="card-img-change circle-change"><i class="fa-regular fa-circle-play"></i></div>
                                 </div>
                                 <div class="card-text">
                                     <h2>Ludovico Einaudi</h2>
@@ -186,7 +196,7 @@
                 </div>
                 <div class="title">
                     <h4>Sinister</h4>
-                    <p>Bruno Mars</p>
+                    <p>Brano Nome</p>
                 </div>
                 <i class="fa-regular fa-heart"></i>
                 <i class="fa-regular fa-folder"></i>
@@ -202,7 +212,9 @@
                 <div class="center-down flex-container">
                     <span>0:25</span>
                     <div class="progress-bar">
-                        <div class="progress"></div>
+                        <div class="progress">
+                            <div class="circle"></div>
+                        </div>
                     </div>
                     <span>4:33</span>
                 </div>
@@ -211,8 +223,15 @@
                 <i class="fa-solid fa-list-ul"></i>
                 <i class="fa-solid fa-desktop"></i>
                 <i class="fa-solid fa-volume-high"></i>
+                <div class="vertical-bar progress-bar">
+                    <div class="vertical-progress progress">
+                        <div class="vertical-circle circle"></div>
+                    </div>
+                </div>
                 <div class="progress-bar">
-                    <div class="progress"></div>
+                    <div class="progress">
+                        <div class="circle"></div>
+                    </div>
                 </div>
 
             </div>
