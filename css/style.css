@@ -270,6 +270,7 @@ main p{
 footer{
     height: 90px;
     width: 100%;
+    color: #A3A3A3;
     background-color: #282828;
     position: fixed;
     bottom: 0;
@@ -290,11 +291,11 @@ footer .fa-regular, footer .fa-solid, footer .title p{
     cursor: pointer;
 }
 /* left */
+footer .left h4{
+    color: white;
+}
 footer .left p{
     font-size: 0.8rem;
-}
-footer .left p, footer .left .fa-regular{
-    color: #A3A3A3;
 }
 footer .left .image{
     width: 50px;
@@ -311,10 +312,11 @@ footer .center{
 }
 .center-up .fa-circle-play{
     font-size: 2.4rem;
+    color: white;
 }
 .center-down{
     width: 100%;
-    justify-content: space-around;
+    gap: 10px;
     font-size: 0.8rem;
 }
 .progress-bar{
@@ -357,6 +359,42 @@ footer .right{
 footer .right .progress-bar{
     width: 100px;
 }
+.right .connect{
+    visibility: hidden;
+    background-color: #282828;
+    width: 350px;
+    height: 500px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 100px;
+    right: 50px;
+}
+.right .connect h1{
+    font-size: 1.7rem;
+    color: white;
+}
+.right .connect .fa-solid{
+    font-size: 4.5rem;
+    margin: 10px;
+    color: white;
+}
+.right .connect p{
+    font-size: 1.3rem;
+}
+.right .connect .info a{
+    background-color: #1ED760;
+    padding: 12px 18px;
+    border-radius: 25px;
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 /* vertical-bar */
 footer .right .vertical-bar{
     display: none;
@@ -378,8 +416,8 @@ footer .title p:hover{
 footer .title p:hover, footer .left .fa-regular:hover{
     color: white;
 }
-footer .center .fa-regular:hover :not(.fa-circle-play), footer .center .fa-solid:hover, footer .right .fa-solid:hover{
-    color: #ADFF2F;
+footer .center .fa-regular:hover, footer .center .fa-solid:hover, footer .right .fa-solid:hover{
+    color: #ffffff;
 }
 .progress-bar .progress:hover{
     background-color: #ADFF2F;
@@ -390,7 +428,14 @@ footer .center .fa-regular:hover :not(.fa-circle-play), footer .center .fa-solid
 .center-up .fa-circle-play:hover{
     transform: scale(1.2);
 }
+footer .right .fa-desktop:hover + .connect{
+    visibility: visible;
+}
+footer .fa-volume-high:active + .progress-bar .progress{
+    width: 100%;
+}
 /* /footer */
+
 /* media query */
 @media screen and (max-width: 992px){
     .main-box .card{
