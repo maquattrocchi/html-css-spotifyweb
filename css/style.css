@@ -148,6 +148,7 @@ main h2{
 main p{
     font-size: 0.8rem;
     padding-top: 13px;
+    color: #A3A3A3;
 }
 main nav{
     padding: 10px 0;
@@ -193,10 +194,75 @@ main nav a{
 footer{
     height: 90px;
     width: 100%;
+    font-size: 0.9rem;
     background-color: #282828;
     position: fixed;
     bottom: 0;
     left: 0;
+    display: flex;
+    align-items: center;
+}
+.flex-container{
+    display: flex;
+}
+footer .box{
+    width: 25%;
+    align-items: center;
+    gap: 15px;
+    margin: 0 20px;
+}
+footer .left p{
+    font-size: 0.8rem;
+}
+footer .left p, footer .left .fa-regular{
+    color: #A3A3A3;
+}
+footer .left .image{
+    width: 50px;
+}
+.left img{
+    width: 100%;
+}
+footer .center{
+    width: 50%;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 15px;
+}
+.center-up{
+    gap: 30px;
+    font-size: 1.1rem;
+    align-items: center;
+}
+.center-up .fa-circle-play{
+    font-size: 1.9rem;
+}
+.center-down{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+}
+.progress-bar{
+    height: 5px;
+    background-color: #A3A3A3;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.progress-bar .progress{
+    width: 30%;
+    height: 5px;
+    background-color: #C1C1C1;
+}
+.center-down .progress-bar{
+    width: 80%;
+}
+footer .right{
+    justify-content: flex-end;
+}
+footer .right .progress-bar{
+    width: 100px;
 }
 
 /* media query */
@@ -208,6 +274,18 @@ footer{
 @media screen and (max-width: 768px){
     .main-box .card{
         width: calc((100% - 75px) / 4);
+    }
+    footer .title{
+        display: none;
+    }
+    .left .fa-regular{
+        display: none;
+    }
+    .right .progress-bar, .right .fa-list-ul, .right .fa-desktop{
+        display: none;
+    }
+    .progress-bar{
+        width: 80%;
     }
 }
 @media screen and (max-width: 576px){
