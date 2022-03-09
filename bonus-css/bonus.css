@@ -171,120 +171,141 @@ main{
 }
 /* main content */
 .main-content{
+    background-color: rgb(0,27,116);
     height: 100%;
     width: 100%;
     overflow-y: auto;
-    padding-top: 70px;
+    padding-top: 90px;
 }
-main h1{
-    font-size: 1.4rem;
-}
-main h2{
-    font-size: 1rem;
-    padding-top: 10px;
-}
-main p{
-    font-size: 0.8rem;
-    padding-top: 13px;
-    color: #A3A3A3;
-}
-/* nav */
-.main-content nav{
-    text-align: center;
-}
-.main-content nav li{
-    display: inline-block;
-    padding: 20px 10px;
-}
-.main-content nav a{
-    color: #A3A3A3;
-    font-size: 0.9rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-.main-content nav li span{
-    padding-bottom: 5px;
-    border-bottom: 3px solid transparent;
-}
-.main-content nav li .active{
-    border-bottom: 3px solid #ADFF2F;
-}
-/* section */
-.main-content section{
-    padding: 20px;
-}
-/* main-box */
-.main-content .main-box{
-    width: 100%;
-    padding-top: 30px;
+/* main top */
+#main-top .main-box{
+    padding: 15px;
     display: flex;
-    flex-flow: row wrap;
-    gap: 15px;
+    align-items: center;
+    gap: 20px;
 }
-.main-box .card{
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 13px;
-    border-radius: 10px;
-    width: calc((100% - 75px) / 6);
+#main-top .image{
+    width: 25%;
 }
-.card-img{
-    width: 100%;
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
+#main-top h1{
+    font-size: 1.3rem;
+    text-transform: uppercase;
 }
-.card-img-change{
-    display: none;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 3.7rem;
-    line-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+#main-top h2{
+    font-size: 5rem;
 }
-.circle-change{
-    border-radius: 50%;
+#main-top p{
+    font-size: 1.2rem;
+    color: #b3b3b3;
 }
-.card-img-change .fa-solid{
-    color: #1ED760;
-    background-color: #000000;
-    border-radius: 50%;
-    position: absolute;
-    top: 55%;
-    right: 10px;
-    animation: show-up 0.3s ease-out;
+#main-top p:last-child{
+    font-size: 1rem;
 }
-@keyframes show-up{
-    from {
-        top: 100%;
-        opacity: 0.1;
-    }
-    to {
-        top: 55%;
-        opacity: 1;
-    }
-}
-.card .circle-img{
-    border-radius: 50%;
-}
-.card .card-text{
-    text-align: center;
-}
-/* main-content hover */
-.main-content nav a:hover{
+#main-top p:last-child span{
     color: white;
 }
-.main-content nav li:hover span{
-    border-bottom: 3px solid #ADFF2F;
+/* main down */
+#main-down{
+    background: rgb(0,27,116);
+    background: linear-gradient(rgba(0,27,116,1) 0%, rgba(0,18,84,1) 31%, rgba(0,0,57,1) 57%, rgba(0,0,36,1) 100%);
+    font-size: 1.3rem;
+    padding: 15px;
+    color: #b3b3b3;
+    text-transform: uppercase;
 }
-.card:hover .card-img-change{
+#main-down nav.flex-container{
+    gap: 25px;
+    margin: 20px 0;
+}
+#main-down .fa-solid.fa-circle-play{
+    color: #1ED760;
+    background-color: black;
+    border-radius: 50%;
+    font-size: 4rem;
+}
+#main-down nav .fa-heart, #main-down nav .fa-ellipsis{
+    font-size: 1.8rem;
+}
+#main-down .music{
+    margin-top: 15px;
+    width: 100%;
+    font-size: 1rem;
+}
+#main-down .music .title-box{
+    border-bottom: 1px solid #b3b3b3;
+}
+.music .number{
+    padding: 10px;
+    width: 5%;
+}
+.music .title{
+    width: 60%;
+    padding: 10px;
+}
+.music .album, .music .time{
+    padding: 10px;
+    width: 17.5%;
+    text-align: right;
+    justify-content: flex-end;
+}
+.music .time{
+    padding-right: 48px;
+}
+/* songs */
+.songs{
+    margin-top: 20px;
+}
+.song i, .song p{
+    cursor: pointer;
+}
+.song .number{
+    position: relative;
+}
+.song .number i{
+    display: none;
+    position: absolute;
+    top: 13px;
+    left: 10px;
+}
+.song .title.flex-container, .songs .time.flex-container{
+    gap: 20px;
+}
+.song .title .image{
+    width: 70px;
+}
+.song .title p:first-of-type{
+    color: white;
+    font-size: 1.3rem;
+}
+.song .title p:last-child{
+    text-transform: capitalize;
+    font-size: 1rem;
+}
+.song .time i{
+    display: none;
+}
+/* main hover */
+.song:hover{
+    background-color: rgba(83, 83, 83, 0.5);
+    color: white;
+}
+.song:hover .number p{
+    display: none;
+}
+.song:hover .number i{
     display: block;
 }
-.card:hover{
-    background-color: rgba(44, 44, 44, 0.5);
+.song .title p:hover{
+    text-decoration: underline;
+}
+.song .time .fa-heart:hover{
+    color: #1ED760;
+}
+.song:hover .time i{
+    display: block;
+}
+.song:hover .time{
+    padding-right: 10px;
 }
 /* /main */
 
@@ -461,13 +482,11 @@ footer .fa-volume-high:active + .progress-bar .progress{
 
 /* media query */
 @media screen and (max-width: 992px){
-    .main-box .card{
-        width: calc((100% - 75px) / 4);
-    }
+    
 }
 @media screen and (max-width: 768px){
-    .main-box .card{
-        width: calc((100% - 75px) / 2);
+    #main-top h2{
+        font-size: 3rem;
     }
     footer .title{
         display: none;
@@ -529,9 +548,6 @@ footer .fa-volume-high:active + .progress-bar .progress{
     }
     .nav-top{
         width: calc(100% - 70px);
-    }
-    .main-box .card{
-        width: calc((100% - 75px) / 2);
     }
 
 }
