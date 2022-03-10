@@ -70,6 +70,9 @@ aside li{
     padding: 5px 20px;
     border-left: 4px solid transparent;
 }
+.menu li.active{
+    border-left: 4px solid #1ED760;
+}
 .menu a{
     vertical-align: middle;
 }
@@ -127,11 +130,8 @@ aside a:hover{
 aside a:hover .fa-solid{
     background-color: white;
 }
-.menu li.active{
-    border-left: 4px solid #ADFF2F;
-}
 .menu li:hover{
-    border-left: 4px solid #ADFF2F;
+    border-left: 4px solid #1ED760;
 }
 /* /aside */
 
@@ -584,7 +584,7 @@ footer .center .fa-regular:hover, footer .center .fa-solid:hover, footer .right 
     color: #ffffff;
 }
 .progress-bar .progress:hover{
-    background-color: #ADFF2F;
+    background-color: #1ED760;
 }
 .progress-bar .progress:hover .circle{
     display: block;
@@ -632,7 +632,6 @@ footer .fa-volume-high:active + .progress-bar .progress{
         font-size: 1rem;
     }
     .song .title p:last-child{
-        text-transform: capitalize;
         font-size: 0.8rem;
     }
     .music .album, footer .image, .left .fa-regular, .right .progress-bar, .right .fa-list-ul, .right .fa-desktop{
