@@ -249,7 +249,7 @@ main{
     justify-content: flex-end;
 }
 .music .time{
-    padding-right: 48px;
+    padding-right: 44px;
 }
 /* songs */
 .songs{
@@ -264,9 +264,47 @@ main{
 .song .number i{
     display: none;
     position: absolute;
-    top: 13px;
+    top: 0;
     left: 10px;
 }
+/* .playing */
+.song .number .playing{
+    display: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    top: -7px;
+}
+.playing .square{
+    background-color: #1ED760;
+    display: inline-block;
+    height: 100%;
+    width: calc((100% - 15px) / 4);
+    animation: square-moving 0.75s infinite;
+}
+
+.playing .second-square{
+    animation-delay: 0.25s;
+}
+.playing .third-square{
+    animation-delay: 0.50s;
+}
+.playing .fourth-square{
+    animation-delay: 0.75s;
+}
+@keyframes square-moving {
+    0% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(0.6);
+    }
+    100% {
+      transform: scaleY(1);
+    }
+}
+/* title */
 .song .title.flex-container, .songs .time.flex-container{
     gap: 20px;
 }
@@ -281,7 +319,12 @@ main{
     text-transform: capitalize;
     font-size: 1rem;
 }
-.song .time i{
+/* time */
+.song .fa-solid.fa-heart{
+    display: block;
+    color: #1ED760;
+}
+.song .time .fa-regular.fa-heart, .song .time .fa-ellipsis {
     display: none;
 }
 /* main hover */
@@ -289,10 +332,16 @@ main{
     background-color: rgba(83, 83, 83, 0.5);
     color: white;
 }
-.song:hover .number p{
+.song:hover .number span{
     display: none;
 }
 .song:hover .number i{
+    display: block;
+}
+.number .fa-play:active{
+    visibility: hidden;
+}
+.number .fa-play:active + .playing{
     display: block;
 }
 .song .title p:hover{
@@ -301,7 +350,7 @@ main{
 .song .time .fa-heart:hover{
     color: #1ED760;
 }
-.song:hover .time i{
+.song:hover .time .fa-regular.fa-heart, .song:hover .time .fa-ellipsis{
     display: block;
 }
 .song:hover .time{
@@ -487,6 +536,15 @@ footer .fa-volume-high:active + .progress-bar .progress{
 @media screen and (max-width: 768px){
     #main-top h2{
         font-size: 3rem;
+    }
+    .music .album{
+        display: none;
+    }
+    .music .time{
+        width: 30%;
+    }
+    .music .number{
+        width: 10%;
     }
     footer .title{
         display: none;

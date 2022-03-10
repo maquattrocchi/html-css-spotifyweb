@@ -449,7 +449,7 @@ footer .center .fa-regular:hover, footer .center .fa-solid:hover, footer .right 
     display: block;
 }
 .center-up .fa-circle-play:hover{
-    transform: scale(1.2);
+    transform: scale(1.3);
 }
 footer .right .fa-desktop:hover + .connect{
     visibility: visible;
