@@ -224,9 +224,11 @@ main{
     background-color: black;
     border-radius: 50%;
     font-size: 4rem;
+    cursor: pointer;
 }
 #main-down nav .fa-heart, #main-down nav .fa-ellipsis{
     font-size: 1.8rem;
+    cursor: pointer;
 }
 #main-down .music{
     margin-top: 15px;
@@ -362,18 +364,16 @@ main{
 .information-up .social{
     text-align: right;
 }
-.information-up .social>div{
-    margin: 0 5px;
-    background-color: #282828;
+.information-up .social i{
+    display: inline-block;
     width: 50px;
     height: 50px;
+    background-color: #282828;
+    cursor: pointer;
     border-radius: 50%;
-    display: inline-block;
     text-align: center;
-    line-height: 60px;
-}
-.information-up .social i{
-    font-size: 1.8rem;
+    line-height: 50px;
+    font-size: 1.8rem
 }
 .information-down{
     margin-top: 100px;
